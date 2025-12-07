@@ -35,7 +35,7 @@ const App: React.FC = () => {
             <a href="#education" className="hover:text-accent transition-colors">Education</a>
           </div>
           <a
-            href="/Resume.pdf"
+            href="/MyDigitalRepository/Resume.pdf"
             download="Prajwal_YP_Resume.pdf"
             className="px-4 py-2 border border-accent text-accent text-xs font-bold uppercase tracking-widest hover:bg-accent hover:text-primary transition-all rounded inline-block"
           >
