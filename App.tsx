@@ -17,14 +17,11 @@ const App: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleDownload = (e: React.MouseEvent) => {
-    e.preventDefault();
-    window.print();
-  };
+
 
   return (
     <div className="min-h-screen bg-primary text-textLight font-sans selection:bg-accent selection:text-primary">
-      
+
       {/* Sticky Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-primary/90 backdrop-blur-md py-4 shadow-lg border-b border-gray-800' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
@@ -37,12 +34,13 @@ const App: React.FC = () => {
             <a href="#projects" className="hover:text-accent transition-colors">Projects</a>
             <a href="#education" className="hover:text-accent transition-colors">Education</a>
           </div>
-           <button 
-            onClick={handleDownload}
-            className="px-4 py-2 border border-accent text-accent text-xs font-bold uppercase tracking-widest hover:bg-accent hover:text-primary transition-all rounded"
-           >
+          <a
+            href="/Resume.pdf"
+            download="Prajwal_YP_Resume.pdf"
+            className="px-4 py-2 border border-accent text-accent text-xs font-bold uppercase tracking-widest hover:bg-accent hover:text-primary transition-all rounded inline-block"
+          >
             Download CV
-          </button>
+          </a>
         </div>
       </nav>
 
@@ -53,7 +51,7 @@ const App: React.FC = () => {
         <Projects />
         <Education />
       </main>
-      
+
       <Footer />
     </div>
   );
